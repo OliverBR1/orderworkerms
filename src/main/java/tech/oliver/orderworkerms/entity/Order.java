@@ -11,7 +11,7 @@ public class Order {
     private Long id;
 
     @Column(nullable = false, unique = true)
-    private String OrderNumber;
+    private String orderNumber;
 
     @Column(nullable = false)
     private String customerEmail;
@@ -23,7 +23,7 @@ public class Order {
     }
 
     public Order(String orderNumber, String customerEmail, boolean notified){
-        this.OrderNumber = orderNumber;
+        this.orderNumber = orderNumber;
         this.customerEmail = customerEmail;
         this.notified = notified;
     }
@@ -37,11 +37,11 @@ public class Order {
     }
 
     public String getOrderNumber() {
-        return OrderNumber;
+        return orderNumber;
     }
 
     public void setOrderNumber(String orderNumber) {
-        OrderNumber = orderNumber;
+        this.orderNumber = orderNumber;
     }
 
     public String getCustomerEmail() {

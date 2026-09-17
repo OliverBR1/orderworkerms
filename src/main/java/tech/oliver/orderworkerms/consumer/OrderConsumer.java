@@ -23,7 +23,7 @@ public class OrderConsumer {
         this.objectMapper = objectMapper;
     }
 
-    @SqsListener("ORDER_CONFIRMED_QUEUE")
+    @SqsListener(ORDER_CONFIRMED_QUEUE)
     public void consume(String message) {
         logger.info("Cosuming {}", message);
         try {
